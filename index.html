@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+    .content-auto {
+      content-visibility: auto;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sign-up form start -->
+  <div class="flex flex-row-reverse items-center p-8 signup :sm-flex-row">
+    <!-- Image  -->
+    <div class="desktop-img">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
+    </div>
+
+    <div class="mobile-img">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="">
+    </div>
+    <!-- Content  -->
+    <div class="flex flex-col mx-auto max-w-md content">
+      <h1 class="font-bold text-4xl ">Stay Updated!</h1>
+      <p class="pt-4 text-base text-">Joing 60,000+ product managers receiving monthly updates on:
+      </p>
+
+      <div class="flex flex-col mt-8 list-container">
+        <div class="flex items-center space-x-4 ">
+          <img src="assets/images/icon-list.svg" alt="">
+          <p>Product discovery and building what matters</p>
+        </div>
+        <div class="flex items-center space-x-4 py-2">
+          <img src="assets/images/icon-list.svg" alt="">
+          <p>Measuring to ensure updates are a success</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <img src="assets/images/icon-list.svg" alt="">
+          <p>And much more!</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="flex flex-col mt-8 space-y-3 form max-w-md" id="form">
+        <label>Email address</label>
+
+        <input class="border rounded-md py-3 px-5 w-full" type="email" required placeholder="email@company.com">
+
+      <button type="submit" class="border rounded-md p-4 text-white w-full" onclick="location.href='#message'">
+          Subscribe to monthly newsletter</button>
+        
+
+
+      </form>
+
+
+
+    </div>
+
+
+  </div>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <div class="success-message flex items-center overlay" id="message">
+    <div class="flex flex-col items-start space-y-4 mx-auto success-content">
+      <img src="assets/images/icon-list.svg" alt="">
+      <h1>Thanks for subscribing!</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex assumenda accusamus optio inventore</p>
+      <a href="#" class="close">&times;</a>
+      <button id="submit" type="submit" class="border rounded-md p-3 text-white w-full">
+        Dismiss message
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- Success message end -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
